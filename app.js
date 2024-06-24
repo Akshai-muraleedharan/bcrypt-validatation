@@ -25,9 +25,9 @@ bcrypt.genSalt(10, (err, salt) => {
         bcrypt.compare(password, hashedPassword,
             async (err, ismatch) => {
                 if (ismatch) {
-                    console.log('Encrypted password is: ', "On the .env file");
+                    console.log('Encrypted password is: ', password);
                     console.log('Decrypted password is: ', hashedPassword);
-                }
+                } 
 
                 if (!ismatch) {
                     console.log(hashedPassword + ' is  not encryption ' )
